@@ -2,3 +2,97 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.banner-show{
+  color: white;
+  text-align: center;
+  height: 400px;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-title {
+  padding: 50px;
+
+}
+
+.wrapper-title h1 {
+  color: white;
+}
+
+
+.icon {
+  margin: 30px 30px;
+  height: 100px;
+  font-size: 20px;
+}
+
+.rules-banner {
+  background-color: white;
+}
+.value-proposition:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease-in-out;
+}
+
+.align-checkbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+#search_date {
+  width: 150px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-relative {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 150px;
+  width: 100%;
+  font-size: 34px;
+}
+.title {
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.punchline {
+  font-size: 30px;
+  font-weight: lighter;
+  // color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.search_form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group input {
+  height: 37px;
+}
