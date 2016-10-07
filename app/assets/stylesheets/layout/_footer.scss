@@ -10,6 +10,17 @@
   .footer-titles {
     color: white;
   }
+  .footer-brand-name {
+    color: yellow;
+  }
+  .fa {
+    color: white;
+    &:hover {
+      color: yellow;
+      transform: scale(1.75);
+      transition: all 300ms ease-in-out;
+    }
+  }
   .no-decoration-list {
     list-style: none;
     padding-left: 0;
@@ -21,12 +32,4 @@
       }
     }
   }
-  img {
-    width: 50px;
-    height: 50px;
-    &:hover {
-      transform: scale(1.75);
-      transition: all 300ms ease-in-out;
-    }
-  }
-}// Your footer style
+}
