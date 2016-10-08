@@ -8,7 +8,6 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise', github: 'plataformatec/devise'
 gem 'redis'
-gem "cloudinary", "1.1.0"
 gem "attachinary", github: "assembler/attachinary"
 gem "jquery-fileupload-rails"
 gem "coffee-rails"
