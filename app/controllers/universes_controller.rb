@@ -7,8 +7,8 @@ before_action :find_universe, only: [:show, :new, :create, :destroy]
   end
 
   def show
-
   end
+
   def new
     @universe = Universe.new
   end
