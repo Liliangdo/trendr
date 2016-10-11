@@ -1,6 +1,6 @@
 class UniversesController < ApplicationController
 
-before_action :find_universe, only: [:show, :new, :create, :destroy]
+before_action :find_universe, only: [:show, :create, :destroy]
 
   def index
     Universe.all
