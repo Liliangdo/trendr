@@ -14,9 +14,17 @@ before_action :find_universe, only: [:show, :new, :create, :destroy]
   end
 
   def create
+    @universe = Universe.new(universe_params)
+    if @universe.save
+      redirect_to root_path, notice: "You have successfully created an universe."
+    else
+      render :new
+    end
   end
 
   def destroy
+    @universe.update(universe_params)
+    redirect_to root_path
   end
 
 
