@@ -36,8 +36,8 @@ before_action :find_universe, only: [:show, :create, :destroy]
 
   def universe_params
     params.require(:universe).permit(
+      :photo,
       :name,
-      :price,
-      :photo)
+      :price)
   end
 end
