@@ -7,6 +7,6 @@
   <button class="btn-upload" type="button" onclick="chooseFile();"><%= t('.upload') %></button>
   <%= f.input :name, maxlength: 25, label: t('.name'), error: t('.name_error')%>
   <%= f.input :price, label: "Prix"%>
-  <%= f.input :category, label: "Category"%>
+  <%= f.input :category, label: "Category",collection: [ "Cuisine", "Salle de bain", "Salon","Chambre","Terrasse"]%>
   <%= f.button :submit, "creer", class: "btn btn-block btn-success" %>
 <% end %>
