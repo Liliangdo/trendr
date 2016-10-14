@@ -1,0 +1,26 @@
+<%= simple_form_for :search, url: universes_path, method: :get do |f| %>
+  <div class="event-list">
+    <h1 class="text-center title-index"><%= session[:category] %>
+    </h1>
+    <% @universes.each do |universe| %>
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+          <%= link_to universe_path(universe), class: "card-link" do %>
+            <div class="card text-center">
+              <div class="card-polaroid hoverable">
+                <div class="card-polaroid-picture" style="background-image: url(<%= helper_picture_url(universe) %>);">
+                  <h4 class="card-title"><%= universe.name %></h4>
+                </div>
+                <div class="media card-bottom">
+                  <div class="media-body card-stats">
+                    <i class="fa fa-eur"></i> <%= universe.price %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

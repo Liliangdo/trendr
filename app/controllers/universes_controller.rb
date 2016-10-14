@@ -3,7 +3,15 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 before_action :find_universe, only: [:show, :destroy]
 
   def index
-    Universe.all
+    @universes = Universe.all
+    session[:category] = params[:search][:category]
+
+    if params[:search].nil?
+      @universes = Universe.where.not(category: nil)
+    else
+      @search = params[:search]
+      @universes = Universe.where(@search[:category])
+    end
   end
 
   def show
