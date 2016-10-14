@@ -1,0 +1,12 @@
+<%= simple_form_for :search, url: universes_path, method: :get do |f| %>
+
+  <div class="col-xs-12 col-md-6">
+    <%= f.input :category, label: false, collection: ["Cuisine", "Salle de bain", "Salon","Chambre","Terrasse"], default: "Cuisine" %>
+
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <%= f.button :submit, "Rechercher", class: 'btn btn-success btn-block' %>
+  </div>
+
+<% end %>
+
