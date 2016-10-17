@@ -1,7 +1,6 @@
 <%= simple_form_for :search, url: universes_path, method: :get do |f| %>
   <div class="event-list">
-    <h1 class="text-center title-index"><%= session[:category] %>
-    </h1>
+    <h1 class="text-center title-index"></h1>
     <% @universes.each do |universe| %>
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">

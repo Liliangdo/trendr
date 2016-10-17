@@ -3,14 +3,13 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 before_action :find_universe, only: [:show, :destroy]
 
   def index
-    @universes = Universe.all
-    session[:category] = params[:search][:category]
+    session[:element] = params[:search][:element]
 
     if params[:search].nil?
-      @universes = Universe.where.not(category: nil)
+      @universes = Universe.where.not(element: nil)
     else
       @search = params[:search]
-      @universes = Universe.where(@search[:category])
+      @universes = Universe.where(@search[:element])
     end
   end
 
@@ -46,6 +45,7 @@ before_action :find_universe, only: [:show, :destroy]
     params.require(:universe).permit(
       :photo,
       :name,
-      :price)
+      :price,
+      :element)
   end
 end
