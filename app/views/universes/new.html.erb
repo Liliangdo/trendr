@@ -1,0 +1,12 @@
+<%= simple_form_for(@universe) do |f| %>
+  <%= f.error_notification %>
+  <% if @universe.errors.any? %>
+    <%= @universe.errors.full_messages.join(" ") %>
+  <% end %>
+  <%= f.input :photo, as: :attachinary %>
+  <button class="btn-upload" type="button" onclick="chooseFile();"><%= t('.upload') %></button>
+  <%= f.input :name, maxlength: 25, label: t('.name'), error: t('.name_error')%>
+  <%= f.input :price, label: "Prix"%>
+  <%= f.input :element, label: "Category", collection: [ "Cuisine", "Salon", "Salle de Bain","Terrasse","Chambre"] %>
+  <%= f.button :submit, "creer", class: "btn btn-block btn-success" %>
+<% end %>

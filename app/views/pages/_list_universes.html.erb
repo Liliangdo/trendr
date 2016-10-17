@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <% @universes.order('created_at DESC').take(9).each do |universe| %>
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to universe_path(universe), class: "card-link" do %>
+        <div class="card text-center">
+          <div class="card-polaroid hoverable">
+            <div class="card-polaroid-picture" style="background-image: url(<%= helper_picture_url(universe) %>);">
+              <h4 class="card-title"><%= universe.name %></h4>
+            </div>
+            <div class="media card-bottom">
+              <div class="media-body card-stats">
+              <ul class="list-inline">
+                <li>
+                  <%= universe.price %> <i class="fa fa-eur"></i>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
