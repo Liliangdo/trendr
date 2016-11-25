@@ -8,3 +8,10 @@ module ApplicationHelper
     end
   end
 end
+def helper_user_picture_tag(user)
+  if user.photo?
+    image_tag("git.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown")
+  else
+    image_tag("git.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown")
+  end
+end
